@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+* {
+  padding: 0;
+  border: none;
+  outline: none;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* colors */
+  /* primary */
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --cyan-transparent: hsla(178, 100%, 50%, 50.3%);
+  /* neutral */
+  --very-dark-blue-body: hsl(217, 54%, 11%);
+  --very-dark-blue-card: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white:hsl(0, 0%, 100%);
+  /* font */
+  --font-family: "Outfit", sans-serif;
+  --heading: 600 1.375rem/normal var(--font-family);
+  --body: 300 1.125rem/1.625rem var(--font-family);
+  --caption: 400 1rem/normal var(--font-family);
+  --caption-bold: 600 1rem/normal var(--font-family);
+}
+
+body {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  background-color: var(--very-dark-blue-body);
+  color: var(--white);
+  font-family: var(--font-family);
+}
+
+main {
+  padding: 0 1.5rem;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  width: min(100%, 21.875rem);
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  border-radius: 15px;
+  background-color: var(--very-dark-blue-card);
+}
+.card__hero {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 8px;
+  background: url("../images/image-equilibrium.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+.card__hero:hover {
+  background: url("../images/icon-view.svg"), linear-gradient(var(--cyan-transparent), var(--cyan-transparent)), url("../images/image-equilibrium.jpg");
+  background-size: 3rem auto, 100%, 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+.card h1 {
+  font: var(--heading);
+  padding: 1.5rem 0 1rem 0;
+}
+.card h1:hover {
+  cursor: pointer;
+  color: var(--cyan);
+}
+.card p {
+  padding-bottom: 1.5rem;
+  font: var(--body);
+  color: var(--soft-blue);
+}
+.card section:nth-child(n+2) {
+  display: flex;
+  align-items: center;
+}
+.card section:nth-child(4) {
+  justify-content: space-between;
+}
+.card section:nth-child(4) section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.card section:nth-child(4) section:first-child {
+  color: var(--cyan);
+}
+.card section:nth-child(4) section:last-child {
+  color: var(--soft-blue);
+}
+.card section:nth-child(5) {
+  height: 81px;
+  gap: 1rem;
+  border-top: 1px solid var(--very-dark-blue-line);
+  margin-top: 1.5rem;
+}
+.card section:nth-child(5) span {
+  font: var(--caption);
+  color: var(--soft-blue);
+}
+.card section:nth-child(5) span a {
+  color: var(--white);
+  text-decoration: none;
+}
+.card section:nth-child(5) span a:hover {
+  cursor: pointer;
+  color: var(--cyan);
+}
+.card__avatar {
+  width: 31px;
+  aspect-ratio: 1/1;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+}
+
+.attribution {
+  height: 4rem;
+  display: grid;
+  place-items: center;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--cyan);
+  text-decoration: none;
+}
+.attribution a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=style.css.map */
